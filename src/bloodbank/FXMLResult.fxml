@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="resultsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLResultController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="242.0" layoutX="75.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="351.0" />
+      <Button fx:id="bTable" layoutX="105.0" layoutY="186.0" mnemonicParsing="false" onAction="#showTable" prefHeight="25.0" prefWidth="183.0" text=" Show Results in Tabular Form" />
+      <Button fx:id="bGraph" layoutX="105.0" layoutY="244.0" mnemonicParsing="false" onAction="#showGraph" text="Show Results in Graphical Form" />
+      <Label layoutX="105.0" layoutY="97.0" text="Select the following to show the Results for the Units " />
+      <Label layoutX="104.0" layoutY="123.0" text="of Blood Collected For Different Blood Groups between" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="242.0" layoutX="570.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" width="351.0" />
+      <Button fx:id="bTable2" layoutX="616.0" layoutY="187.0" mnemonicParsing="false" onAction="#showTable2" prefHeight="25.0" prefWidth="183.0" text="Show Results In Tabular Form" />
+      <Button fx:id="bGraph2" layoutX="616.0" layoutY="244.0" mnemonicParsing="false" onAction="#showGraph2" prefHeight="25.0" prefWidth="183.0" text="Show Results In Graphical Form" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="242.0" layoutX="75.0" layoutY="363.0" stroke="BLACK" strokeType="INSIDE" width="351.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="242.0" layoutX="570.0" layoutY="363.0" stroke="BLACK" strokeType="INSIDE" width="351.0" />
+      <Button layoutX="616.0" layoutY="478.0" mnemonicParsing="false" onAction="#showTable4" prefHeight="25.0" prefWidth="183.0" text="Show Results In Tabular Form" />
+      <Button layoutX="616.0" layoutY="538.0" mnemonicParsing="false" onAction="#showGraph4" text="Show Results In Graphical Form" />
+      <Button layoutX="105.0" layoutY="478.0" mnemonicParsing="false" onAction="#showTable3" prefHeight="25.0" prefWidth="183.0" text="Show Results In Tabular Form" />
+      <Button layoutX="105.0" layoutY="538.0" mnemonicParsing="false" onAction="#showGraph3" text="Show Results In Graphical Form" />
+      <Label layoutX="104.0" layoutY="150.0" text="two particular dates :-" />
+      <Label layoutX="616.0" layoutY="97.0" text="Select the following to show the Results for the Units" />
+      <Label layoutX="616.0" layoutY="123.0" text="of Blood Collected For Different Blood Groups which " />
+      <Label layoutX="616.0" layoutY="150.0" text="are available till Date :-" />
+      <Label layoutX="104.0" layoutY="384.0" text="Select the following to show the results for the Units" />
+      <Label layoutX="105.0" layoutY="410.0" text="of Blood for Different Blood Groups which have been " />
+      <Label layoutX="104.0" layoutY="439.0" text="Expired till date but were available :-" />
+      <Label layoutX="616.0" layoutY="384.0" text="Select the following to show the Results for the Units" />
+      <Label layoutX="616.0" layoutY="410.0" text="of Blood Collected for Different Blood Groups which" />
+      <Label layoutX="616.0" layoutY="439.0" text="are Not Available till Date :-" />
+   </children>
+</AnchorPane>

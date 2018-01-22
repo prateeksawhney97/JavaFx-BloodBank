@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="resultsPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLGraph2Controller">
+   <children>
+      <Button fx:id="bBack" layoutX="381.0" layoutY="86.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="146.0" text="Back" />
+      <Button fx:id="bLoad" layoutX="381.0" layoutY="149.0" mnemonicParsing="false" onAction="#loadData" prefHeight="40.0" prefWidth="146.0" text="Load Data" />
+      <BarChart fx:id="barChart" layoutX="26.0" layoutY="274.0" prefHeight="378.0" prefWidth="431.0" title="Available Blood Collection">
+        <xAxis>
+          <CategoryAxis label="Blood Group" side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" label="Amount (Units)" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <LineChart fx:id="lineChart" layoutX="512.0" layoutY="252.0" prefHeight="400.0" prefWidth="463.0" title="Available Blood Collection">
+        <xAxis>
+          <CategoryAxis label="Blood Group" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Amount (Units)" side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

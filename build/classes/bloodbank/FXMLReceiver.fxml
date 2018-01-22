@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="763.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLReceiverController">
+   <children>
+      <TableView fx:id="tReceiver" layoutX="189.0" layoutY="382.0" onMouseClicked="#uploadData" prefHeight="300.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="cID" prefWidth="61.0" text="ID" />
+          <TableColumn fx:id="cName" prefWidth="123.0" text="Name" />
+            <TableColumn fx:id="cContact" prefWidth="145.0" text="Contact No." />
+            <TableColumn fx:id="cGender" prefWidth="68.0" text="Gender" />
+            <TableColumn fx:id="cDOB" prefWidth="123.0" text="DOB" />
+            <TableColumn fx:id="cCity" prefWidth="134.0" text="City" />
+            <TableColumn fx:id="cGroup" prefWidth="166.0" text="Blood Group Needed" />
+            <TableColumn fx:id="cUnits" minWidth="0.0" prefWidth="203.0" text="Units Required" />
+        </columns>
+      </TableView>
+      <TextField fx:id="bName" layoutX="77.0" layoutY="55.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Name" />
+      <TextField fx:id="bContactNumber" layoutX="77.0" layoutY="115.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter The Contact Number" />
+      <RadioButton fx:id="rMale" layoutX="77.0" layoutY="277.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rFemale" layoutX="77.0" layoutY="313.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <Label layoutX="77.0" layoutY="234.0" text="Select Gender" />
+      <DatePicker fx:id="dDOB" layoutX="338.0" layoutY="55.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Date Of Birth" />
+      <ListView fx:id="lvCity" layoutX="338.0" layoutY="121.0" prefHeight="200.0" prefWidth="200.0" />
+      <ComboBox fx:id="cbBloodGroup" layoutX="627.0" layoutY="55.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter The Blood Group Needed" />
+      <TextField fx:id="tUnits" layoutX="627.0" layoutY="128.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter The Units Required" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9ecee" height="134.0" layoutX="627.0" layoutY="186.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
+      <Button fx:id="bSave" layoutX="654.0" layoutY="217.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="70.0" text="Save" />
+      <Button fx:id="bLoadData" layoutX="654.0" layoutY="264.0" mnemonicParsing="false" onAction="#loadData" text="Load Data" />
+      <Button fx:id="bNew" layoutX="759.0" layoutY="217.0" mnemonicParsing="false" onAction="#newEntry" prefHeight="25.0" prefWidth="70.0" text="New" />
+      <Button fx:id="bDelete" layoutX="759.0" layoutY="264.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+      <TextField fx:id="tID" layoutX="77.0" layoutY="174.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter The Receiver ID" />
+   </children>
+</AnchorPane>

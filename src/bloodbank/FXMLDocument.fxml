@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLDocumentController">
+   <children>
+      <SplitPane dividerPositions="0.22862453531598512" layoutX="46.0" layoutY="143.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="bDonor" layoutX="28.0" layoutY="19.0" mnemonicParsing="false" onAction="#showDonor" prefHeight="82.0" prefWidth="191.0" text="Donor" />
+                  <Button fx:id="tBlood" layoutX="27.0" layoutY="114.0" mnemonicParsing="false" onAction="#showBlood" prefHeight="82.0" prefWidth="191.0" text="Blood" />
+                  <Button fx:id="tReport" layoutX="26.0" layoutY="212.0" mnemonicParsing="false" onAction="#showReport" prefHeight="82.0" prefWidth="191.0" text="Report" />
+                  <Button fx:id="bClose" layoutX="25.0" layoutY="602.0" mnemonicParsing="false" onAction="#closeCurrentTab" prefHeight="82.0" prefWidth="191.0" text="Close" />
+                  <Button fx:id="bResult" layoutX="26.0" layoutY="308.0" mnemonicParsing="false" onAction="#showResults" prefHeight="82.0" prefWidth="191.0" text="Show Results" />
+                  <Button fx:id="bReceive" layoutX="26.0" layoutY="407.0" mnemonicParsing="false" onAction="#showReceiverDetails" prefHeight="82.0" prefWidth="191.0" text="Receiver Details" />
+                  <Button fx:id="bPhoto" layoutX="25.0" layoutY="507.0" mnemonicParsing="false" onAction="#showPhotos" prefHeight="82.0" prefWidth="191.0" text="Photo Selection" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane fx:id="tabMain" layoutX="49.0" layoutY="113.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab fx:id="aboutPane" text="About Us">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="imageView" fitHeight="650.0" fitWidth="986.0" layoutX="28.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-133.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="-187.0" AnchorPane.topAnchor="152.0" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

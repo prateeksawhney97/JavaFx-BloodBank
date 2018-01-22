@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLBloodController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="96.0" layoutY="100.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField fx:id="tSerial" layoutX="64.0" layoutY="54.0" prefHeight="25.0" prefWidth="190.0" promptText="Enter Serial No." />
+                  <TextField fx:id="tDID" layoutX="64.0" layoutY="124.0" prefHeight="25.0" prefWidth="190.0" promptText="Enter D_ID" />
+                  <DatePicker fx:id="dRdate" layoutX="336.0" layoutY="54.0" prefHeight="25.0" prefWidth="190.0" promptText="Enter Receiving Date" />
+                  <DatePicker fx:id="dEdate" layoutX="336.0" layoutY="124.0" prefHeight="25.0" prefWidth="190.0" promptText="Enter Expiry Date" />
+                  <TextField fx:id="tStatus" layoutX="336.0" layoutY="201.0" prefHeight="25.0" prefWidth="190.0" promptText="Enter Status" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5eaee" height="300.0" layoutX="559.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Button fx:id="bSave" layoutX="581.0" layoutY="79.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="78.0" text="Save" />
+                  <Button fx:id="bDelete" layoutX="670.0" layoutY="79.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+                  <Button fx:id="bNewEntry" layoutX="581.0" layoutY="143.0" mnemonicParsing="false" onAction="#newEntry" prefHeight="25.0" prefWidth="78.0" text="New Entry" />
+                  <Button fx:id="bUpdate" layoutX="670.0" layoutY="143.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="70.0" text="Update" />
+                  <Button fx:id="bLoadData" layoutX="624.0" layoutY="214.0" mnemonicParsing="false" onAction="#loadData" text="Load Data" />
+                  <ComboBox fx:id="cbGroup" layoutX="64.0" layoutY="202.0" prefHeight="25.0" prefWidth="190.0" promptText="Select Blood Group" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tBlood" layoutX="141.0" layoutY="14.0" onMouseClicked="#uploadData" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="cSNO" prefWidth="75.0" text="SNO" />
+                      <TableColumn fx:id="cDID" prefWidth="75.0" text="DID" />
+                        <TableColumn fx:id="cBloodGroup" prefWidth="123.0" text="Blood Group" />
+                        <TableColumn fx:id="cRdate" prefWidth="166.0" text="Receiving Date" />
+                        <TableColumn fx:id="cEdate" prefWidth="175.0" text="Expiry Date" />
+                        <TableColumn fx:id="cStatus" minWidth="1.0" prefWidth="183.0" text="Status" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

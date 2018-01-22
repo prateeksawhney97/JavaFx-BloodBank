@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLDonorController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="14.0" layoutY="72.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField fx:id="tDID" layoutX="49.0" layoutY="46.0" prefHeight="25.0" prefWidth="174.0" promptText="Enter D_ID" />
+                  <TextField fx:id="tName" layoutX="49.0" layoutY="114.0" prefHeight="25.0" prefWidth="174.0" promptText="Enter Name" />
+                  <TextField fx:id="tContact" layoutX="291.0" layoutY="46.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Contact No." />
+                  <TextField fx:id="tEmail" layoutX="291.0" layoutY="114.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Email ID" />
+                  <Label layoutX="49.0" layoutY="182.0" text="Gender" />
+                  <RadioButton fx:id="rMale" layoutX="49.0" layoutY="233.0" mnemonicParsing="false" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rFemale" layoutX="49.0" layoutY="276.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+                  <DatePicker fx:id="dDOB" layoutX="49.0" layoutY="324.0" promptText="Enter DOB" />
+                  <TextArea fx:id="tAddress" layoutX="291.0" layoutY="182.0" prefHeight="172.0" prefWidth="200.0" promptText="Enter Address" />
+                  <ListView fx:id="lvCity" layoutX="553.0" layoutY="46.0" prefHeight="122.0" prefWidth="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="155.0" layoutX="529.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <Button fx:id="bSave" layoutX="616.0" layoutY="218.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="71.0" text="Save" />
+                  <Button fx:id="bDelete" layoutX="559.0" layoutY="306.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="71.0" text="Delete" />
+                  <Button fx:id="bLoadData" layoutX="668.0" layoutY="261.0" mnemonicParsing="false" onAction="#loadData" prefHeight="31.0" prefWidth="70.0" text="Load Data" />
+                  <Button fx:id="bNewEntry" layoutX="667.0" layoutY="306.0" mnemonicParsing="false" onAction="#newEntry" prefHeight="31.0" prefWidth="71.0" text="New Entry" />
+                  <Button fx:id="bUpdate" layoutX="560.0" layoutY="261.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="70.0" text="Update" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tDonors" layoutX="76.0" layoutY="14.0" onMouseClicked="#uploadData" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="cDID" prefWidth="55.0" text="DID" />
+                      <TableColumn fx:id="cName" prefWidth="142.0" text="Name" />
+                        <TableColumn fx:id="cGender" prefWidth="53.0" text="Gender" />
+                        <TableColumn fx:id="cDOB" prefWidth="93.0" text="Date Of Birth" />
+                        <TableColumn fx:id="cContact" prefWidth="101.0" text="Contact No." />
+                        <TableColumn fx:id="cEmail" prefWidth="79.0" text="Email ID" />
+                        <TableColumn fx:id="cAddress" prefWidth="160.0" text="Address" />
+                        <TableColumn fx:id="cCity" prefWidth="114.0" text="City" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

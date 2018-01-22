@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLReportController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="162.0" layoutY="155.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField fx:id="tSNO" layoutX="64.0" layoutY="63.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter S_NO" />
+                  <TextField fx:id="tSugar" layoutX="64.0" layoutY="140.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter  Sugar" />
+                  <TextField fx:id="tHB" layoutX="64.0" layoutY="215.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter HB" />
+                  <TextField fx:id="tPlatelets" layoutX="287.0" layoutY="63.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter Platelets Count" />
+                  <TextField fx:id="tUricAcid" layoutX="287.0" layoutY="140.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter Uric Acid" />
+                  <TextField fx:id="tWBC" layoutX="287.0" layoutY="215.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter WBC Count" />
+                  <TextField fx:id="tBP" layoutX="64.0" layoutY="295.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter BP" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f8" height="311.0" layoutX="546.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Button fx:id="bSave" layoutX="574.0" layoutY="76.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="73.0" text="Save" />
+                  <Button fx:id="bDelete" layoutX="653.0" layoutY="76.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="73.0" text="Delete" />
+                  <Button fx:id="bNewEntry" layoutX="574.0" layoutY="128.0" mnemonicParsing="false" onAction="#newEntry" prefHeight="25.0" prefWidth="73.0" text="New Entry" />
+                  <Button fx:id="bLoadData" layoutX="610.0" layoutY="178.0" mnemonicParsing="false" onAction="#loadData" prefHeight="25.0" prefWidth="83.0" text="Load Data" />
+                  <Button fx:id="bUpdate" layoutX="653.0" layoutY="128.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="73.0" text="Update" />
+                  <Button layoutX="610.0" layoutY="276.0" mnemonicParsing="false" onAction="#printReport" prefHeight="25.0" prefWidth="83.0" text="Report" />
+                  <Button layoutX="610.0" layoutY="228.0" mnemonicParsing="false" onAction="#showWebcam" prefHeight="25.0" prefWidth="83.0" text="WebCam" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tReport" layoutX="181.0" layoutY="22.0" onMouseClicked="#uploadData" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="cSNO" prefWidth="75.0" text="S_NO" />
+                      <TableColumn fx:id="cSugar" prefWidth="134.0" text="Sugar" />
+                        <TableColumn fx:id="cHB" prefWidth="85.0" text="HB" />
+                        <TableColumn fx:id="cBP" prefWidth="102.0" text="BP" />
+                        <TableColumn fx:id="cPlatelets" prefWidth="122.0" text="Platelets" />
+                        <TableColumn fx:id="cUricAcid" prefWidth="140.0" text="Uric Acid" />
+                        <TableColumn fx:id="cWBC" prefWidth="139.0" text="WBC Count" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

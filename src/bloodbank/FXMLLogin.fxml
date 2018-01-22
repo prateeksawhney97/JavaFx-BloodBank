@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLLoginController">
+   <children>
+      <TextField fx:id="tUsername" layoutX="210.0" layoutY="80.0" prefHeight="25.0" prefWidth="303.0" promptText="Enter Login ID" />
+      <Label fx:id="lPassword" layoutX="210.0" layoutY="257.0" prefHeight="17.0" prefWidth="134.0" />
+      <CheckBox fx:id="cbPassword" layoutX="379.0" layoutY="257.0" mnemonicParsing="false" onAction="#showHidePassword" prefHeight="17.0" prefWidth="134.0" text="Show/Hide Password" />
+      <Button defaultButton="true" layoutX="210.0" layoutY="380.0" mnemonicParsing="false" onAction="#checkLogin" prefHeight="45.0" prefWidth="134.0" text="Login" />
+      <Button cancelButton="true" layoutX="379.0" layoutY="380.0" mnemonicParsing="false" onAction="#exitForm" prefHeight="45.0" prefWidth="134.0" text="Exit" />
+      <PasswordField fx:id="tPassword" layoutX="210.0" layoutY="157.0" onKeyReleased="#copyPassword" prefHeight="25.0" prefWidth="303.0" promptText="Enter Password">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></PasswordField>
+   </children>
+</AnchorPane>

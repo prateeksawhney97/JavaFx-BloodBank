@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="resultsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLGraph1Controller">
+   <children>
+      <Button fx:id="bBack" layoutX="34.0" layoutY="45.0" mnemonicParsing="false" onAction="#back" prefHeight="37.0" prefWidth="174.0" text="Back" />
+      <DatePicker fx:id="dFdate" layoutX="284.0" layoutY="45.0" promptText="Select The Starting Date" />
+      <DatePicker fx:id="dTdate" layoutX="284.0" layoutY="110.0" promptText="Select the Ending Date" />
+      <BarChart fx:id="barChart" layoutY="232.0" title="Blood Collection">
+        <xAxis>
+          <CategoryAxis label="Blood Group" side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Units" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <LineChart fx:id="lineChart" layoutX="500.0" layoutY="232.0" title="Blood Collection">
+        <xAxis>
+          <CategoryAxis label="Blood Group" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Units" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="bLoad" layoutX="545.0" layoutY="45.0" mnemonicParsing="false" onAction="#loadData" prefHeight="37.0" prefWidth="174.0" text="Load Data" />
+   </children>
+</AnchorPane>

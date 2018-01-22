@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="resultsPane" prefHeight="763.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodbank.FXMLTable4Controller">
+   <children>
+      <TableView fx:id="tTable4" layoutX="269.0" layoutY="327.0" prefHeight="515.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="cAmount" prefWidth="357.0" text="Amount (Units)" />
+          <TableColumn fx:id="cGroup" minWidth="0.0" prefWidth="361.0" text="Blood Group" />
+        </columns>
+      </TableView>
+      <Button fx:id="bBack" layoutX="460.0" layoutY="69.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="168.0" text="Back" />
+      <Button fx:id="bLoad" layoutX="460.0" layoutY="143.0" mnemonicParsing="false" onAction="#loadData" prefHeight="42.0" prefWidth="168.0" text="Load Data" />
+   </children>
+</AnchorPane>
