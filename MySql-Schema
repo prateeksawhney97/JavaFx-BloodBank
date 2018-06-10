@@ -1,0 +1,13 @@
+create database bloodbank;
+
+create table donor(did int(11) primary key,name char(20),gender char(6),dob date,contactno char(15),emailid char(30),address char(100),city char(15));
+
+create table blood(sno int(11) primary key,did int(11),bgroup char(10),rdate date,edate date,status char(18));
+
+alter table blood add foreign key(did) references donor(did);
+
+create table receiver(rid int(11) primary key,name char(20),contactno char(15),gender char(6),dob date,city char(15),bgroup char(15),units int(15));
+
+create table report(sno int(11) primary key,sugar int(11),hb double,bp int(11),platelets int(11),uricacid double,wbc int(11));
+
+create table pics(sno int(11),pic blob);
